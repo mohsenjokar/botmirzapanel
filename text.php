@@ -5,7 +5,7 @@ $textbotlang['users']['channel']['link'] = "تنظیم نشده";
 $textbotlang['users']['channel']['text_join'] = "🔗 عضویت در کانال";
 $textbotlang['users']['channel']['confirmjoin'] = "✅ بررسی عضویت";
 $textbotlang['users']['channel']['confirmed'] = "عضویت شما با موفقیت تایید گردید با تشکر از شما❤️";
-$textbotlang['users']['channel']['notconfirmed'] = "❌ هنوز عضو کانال نشده اید.️";
+$textbotlang['users']['channel']['notconfirmed'] = "❌ شما هنوز عضو کانال نشده اید.️";
 
 
 $textbotlang['users']['Rules'] = "✅ قوانین تایید شد از الان می توانید از خدمات ربات استفاده نمایید.";
