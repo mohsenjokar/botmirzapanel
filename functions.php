@@ -333,7 +333,7 @@ function DirectPayment($order_id){
             $result = number_format($result);
             $textadd = "🎁  پرداخت پورسانت 
         
-        مبلغ $result تومان به حساب شما از طرف  زیر مجموعه تان به کیف پول شما واریز گردید";
+        مبلغ $result ترون به حساب شما از طرف  زیر مجموعه تان به کیف پول شما واریز گردید";
             sendmessage($Balance_id['affiliates'], $textadd, null, 'HTML');
             }
         }
@@ -347,12 +347,12 @@ function DirectPayment($order_id){
 ⚙️ یک کاربر اکانت  با نام کانفیگ {$get_invoice['username']} خریداری کرد
         
         
-قیمت محصول : {$get_invoice['price_product']} تومان
+قیمت محصول : {$get_invoice['price_product']} ترون
 حجم محصول : {$get_invoice['Volume']} 
 آیدی عددی کاربر : <code>{$get_invoice['id_user']}</code>
 شماره تلفن کاربر : {$Balance_id['number']}
 موقعیت سرویس کاربر :{$get_invoice['Service_location']}
-موجودی کاربر : $balanceformatsell  تومان
+موجودی کاربر : $balanceformatsell  ترون
 کد پیگیری: $randomString
         
             اطلاعات کاربر 👇👇
@@ -390,7 +390,7 @@ function DirectPayment($order_id){
         )
         );
         }
-        sendmessage($Payment_report['id_user'], "💎 کاربر گرامی مبلغ {$Payment_report['price']} تومان به کیف پول شما واریز گردید با تشکراز پرداخت شما.
+        sendmessage($Payment_report['id_user'], "💎 کاربر گرامی مبلغ {$Payment_report['price']} ترون به کیف پول شما واریز گردید با تشکراز پرداخت شما.
                 
 🛒 کد پیگیری شما: {$Payment_report['id_order']}", null, 'HTML');
 }
