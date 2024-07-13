@@ -764,9 +764,9 @@ if (preg_match('/subscriptionurl_(\w+)/', $datain, $dataget)) {
 🪪 آیدی عددی : <code>$from_id</code>
 🪪  نام کاربری : @$username
 🛍 نام محصول :  {$product['name_product']}
-💰 مبلغ تمدید $priceproductformat تومان
+💰 مبلغ تمدید $priceproductformat ترون
 👤 نام کاربری مشتری در پنل  : $usernamepanel
-موجودی کاربر : $balanceformatsell تومان
+موجودی کاربر : $balanceformatsell ترون
 لوکیشن سرویس کاربر : {$nameloc['Service_location']}";
     if (isset($setting['Channel_Report']) &&strlen($setting['Channel_Report']) > 0) {
         sendmessage($setting['Channel_Report'], $text_report, null, 'HTML');
@@ -818,8 +818,8 @@ if (preg_match('/subscriptionurl_(\w+)/', $datain, $dataget)) {
     $setting['Extra_volume'] = number_format($setting['Extra_volume']);
     $textextra = "📇 فاکتور خرید حجم اضافه برای شما ایجاد شد.
     
-💰 قیمت هر گیگابایت حجم اضافه :  {$setting['Extra_volume']} تومان
-📝 مبلغ  فاکتور شما :  $priceextra تومان
+💰 قیمت هر گیگابایت حجم اضافه :  {$setting['Extra_volume']} ترون
+📝 مبلغ  فاکتور شما :  $priceextra ترون
 📥 حجم اضافه درخواستی : $text  گیگابایت
 
 ✅ جهت پرداخت و اضافه شدن حجم، روی دکمه زیر کلیک کنید.";
@@ -874,7 +874,7 @@ if (preg_match('/subscriptionurl_(\w+)/', $datain, $dataget)) {
     اطلاعات کاربر : 
 🪪 آیدی عددی : $from_id
 🛍 حجم خریداری شده  : $volumes
-💰 مبلغ پرداختی : $volume تومان";
+💰 مبلغ پرداختی : $volume ترون";
 if (isset($setting['Channel_Report']) &&strlen($setting['Channel_Report']) > 0) {
         sendmessage($setting['Channel_Report'], $text_report, null, 'HTML');
     }
@@ -1220,7 +1220,7 @@ if ($text == $datatextbot['text_account']) {
             
 👤 نام: $first_name
 🕴🏻 شناسه کاربری: <code>$from_id</code>
-💰 موجودی: $Balanceuser تومان
+💰 موجودی: $Balanceuser ترون
 🛍 تعداد سرویس های خریداری شده : $countorder
 🤝 تعداد زیر مجموعه های شما : {$user['affiliatescount']} نفر
     
@@ -1346,7 +1346,7 @@ if ($text == $datatextbot['text_sell']) {
 👤 نام کاربری: <code>$username_ac</code>
 🔐 نام سرویس: {$info_product['name_product']}
 📆 مدت اعتبار: {$info_product['Service_time']} روز
-💶 قیمت: {$info_product['price_product']}  تومان
+💶 قیمت: {$info_product['price_product']}  ترون
 👥 حجم اکانت: {$info_product['Volume_constraint']} گیگ
 💵 موجودی کیف پول شما : {$user['Balance']}
     
@@ -1453,7 +1453,7 @@ if ($text == $datatextbot['text_sell']) {
         $result = number_format($result);
         $textadd = "🎁  پرداخت پورسانت 
     
-مبلغ $result تومان به حساب شما از طرف  زیر مجموعه تان به کیف پول شما واریز گردید";
+مبلغ $result ترون به حساب شما از طرف  زیر مجموعه تان به کیف پول شما واریز گردید";
         sendmessage($user['affiliates'], $textadd, null, 'HTML');
         }
     }
@@ -1523,12 +1523,12 @@ $link_config
             
     ⚙️ یک کاربر اکانت  با نام کانفیگ <code>$username_ac</code> خریداری کرد
     
-    قیمت محصول : {$info_product['price_product']} تومان
+    قیمت محصول : {$info_product['price_product']} ترون
     حجم محصول : {$info_product['Volume_constraint']} 
     آیدی عددی کاربر : <code>$from_id</code>
     شماره تلفن کاربر : {$user['number']}
     موقعیت سرویس کاربر :{$user['Processing_value']}
-    موجودی کاربر : {$user['Balance']} تومان
+    موجودی کاربر : {$user['Balance']} ترون
     
         اطلاعات کاربر 👇👇
         ⚜️ نام کاربری کاربر: @$username";
@@ -1584,7 +1584,7 @@ $link_config
 👤 نام کاربری: <code>{$user['Processing_value_tow']}</code>
 🔐 نام سرویس: {$info_product['name_product']}
 📆 مدت اعتبار: {$info_product['Service_time']} روز
-💶 قیمت: {$info_product['price_product']}  تومان
+💶 قیمت: {$info_product['price_product']}  ترون
 👥 حجم اکانت: {$info_product['Volume_constraint']} گیگ
 💵 موجودی کیف پول شما : {$user['Balance']}
               
@@ -1624,7 +1624,7 @@ if ($text == $datatextbot['text_Add_Balance']) {
     if ($datain == "cart_to_offline") {
         $PaySetting = select("PaySetting", "ValuePay", "NamePay", "CartDescription", "select")['ValuePay'];
         $Processing_value = number_format($user['Processing_value']);
-        $textcart = "برای افزایش موجودی به صورت دستی، مبلغ $Processing_value  تومان  را به شماره‌ی حساب زیر واریز کنید 👇🏻
+        $textcart = "برای افزایش موجودی به صورت دستی، مبلغ $Processing_value  ترون  را به شماره‌ی حساب زیر واریز کنید 👇🏻
     
     ==================== 
     $PaySetting
@@ -1632,7 +1632,7 @@ if ($text == $datatextbot['text_Add_Balance']) {
     
 🌅 عکس رسید خود را در این مرحله ارسال نمایید. 
     
-⚠️ حداکثر واریز مبلغ 10 میلیون تومان می باشد.
+⚠️ حداکثر واریز مبلغ 10 میلیون ترون می باشد.
 ⚠️ امکان برداشت وجه از کیف پول  نیست.
 ⚠️ مسئولیت واریز اشتباهی با شماست.";
         sendmessage($from_id, $textcart, $backuser, 'HTML');
@@ -1674,7 +1674,7 @@ if ($text == $datatextbot['text_Add_Balance']) {
 ✅ فاکتور پرداخت ایجاد شد.
         
 🔢 شماره فاکتور : $randomString
-💰 مبلغ فاکتور : {$user['Processing_value']} تومان
+💰 مبلغ فاکتور : {$user['Processing_value']} ترون
     
     جهت پرداخت از دکمه زیر استفاده کنید👇🏻";
         sendmessage($from_id, $textnowpayments, $paymentkeyboard, 'HTML');
@@ -1720,9 +1720,9 @@ if ($text == $datatextbot['text_Add_Balance']) {
             ✅ فاکتور پرداخت ارزی NOWPayments ایجاد شد.
         
 🔢 شماره فاکتور : $randomString
-💰 مبلغ فاکتور : $Processing_value تومان
+💰 مبلغ فاکتور : $Processing_value ترون
         
-📊 قیمت دلار روز : $USD تومان
+📊 قیمت دلار روز : $USD ترون
 💵 نهایی:$usdprice دلار 
         
         
@@ -1796,12 +1796,12 @@ if ($text == $datatextbot['text_Add_Balance']) {
 🌐 شبکه: TRX
 💳 آدرس ولت: <code>$pay_address</code>
 💲 مبلغ تراکنش به ترون : <code>$trxprice</code>
-💲 مبلغ تراکنش به تومان  : <code>$pricetoman</code>
+💲 مبلغ تراکنش به ترون  : <code>$pricetoman</code>
 💲 نرخ ترون   : <code>$trx</code>
     
     
     
-📌 مبلغ $pricetoman  تومان بعد از تایید پرداخت توسط شبکه بلاکچین به کیف پول شما اضافه میشود
+📌 مبلغ $pricetoman  ترون بعد از تایید پرداخت توسط شبکه بلاکچین به کیف پول شما اضافه میشود
     
 💢 لطفا به این نکات قبل از پرداخت توجه کنید 👇
     
@@ -2007,7 +2007,7 @@ if (preg_match('/Confirmpay_user_(\w+)_(\w+)/', $datain, $dataget)) {
 👤 شناسه کاربر: $from_id
 🛒 کد پیگیری پرداخت: $randomString
 ⚜️ نام کاربری: @$username
-💸 مبلغ پرداختی: $Processing_value تومان
+💸 مبلغ پرداختی: $Processing_value ترون
             
 توضیحات: $caption
 ✍️ در صورت درست بودن رسید پرداخت را تایید نمایید.";
@@ -2057,7 +2057,7 @@ if ($datain == "Discount") {
     $get_codesql = $stmt->fetch(PDO::FETCH_ASSOC);
     step('home', $from_id);
     number_format($get_codesql['price']);
-    $text_balance_code = "کد هدیه با موفقیت ثبت شد و به موجودی شما مبلغ {$get_codesql['price']} تومان اضافه گردید. 🥳";
+    $text_balance_code = "کد هدیه با موفقیت ثبت شد و به موجودی شما مبلغ {$get_codesql['price']} ترون اضافه گردید. 🥳";
     sendmessage($from_id, $text_balance_code, $keyboard, 'HTML');
     $stmt = $pdo->prepare("INSERT INTO Giftcodeconsumed (id_user, code) VALUES (?, ?)");
     $stmt->bindParam(1, $from_id);
@@ -2094,7 +2094,7 @@ if ($text == "👥 زیر مجموعه گیری") {
         $affiliatespercentage = "غیرفعال";
     }
     if ($affiliatescommission['Discount'] == "onDiscountaffiliates") {
-        $price_Discount = $affiliatescommission['price_Discount'] . " تومان";
+        $price_Discount = $affiliatescommission['price_Discount'] . " ترون";
     } else {
         $price_Discount = "غیرفعال";
     }
@@ -2274,7 +2274,7 @@ if ($text == "📊 آمار ربات") {
                 ['text' => $textbotlang['Admin']['Balanceall'], 'callback_data' => 'Balanceall'],
             ],
             [
-                ['text' => $suminvoiceday." تومان", 'callback_data' => 'sumpro'],
+                ['text' => $suminvoiceday." ترون", 'callback_data' => 'sumpro'],
                 ['text' => $textbotlang['Admin']['sumporoduct'], 'callback_data' => 'sumpro'],
             ],
         ]
@@ -3265,7 +3265,7 @@ if ($text == "⬆️️️ افزایش موجودی کاربر") {
     $Balance_add_user = $Balance_user['Balance'] + $text;
     update("user", "Balance", $Balance_add_user, "id", $user['Processing_value']);
     $text = number_format($text);
-    $textadd = "💎 کاربر عزیز مبلغ $text تومان به موجودی کیف پول تان اضافه گردید.";
+    $textadd = "💎 کاربر عزیز مبلغ $text ترون به موجودی کیف پول تان اضافه گردید.";
     sendmessage($user['Processing_value'], $textadd, null, 'HTML');
     step('home', $from_id);
 }
@@ -3291,7 +3291,7 @@ if ($text == "⬇️ کم کردن موجودی") {
     $Balance_Low_user = $Balance_user['Balance'] - $text;
     update("user", "Balance", $Balance_Low_user, "id", $user['Processing_value']);
     $text = number_format($text);
-    $textkam = "❌ کاربر عزیز مبلغ $text تومان از  موجودی کیف پول تان کسر گردید.";
+    $textkam = "❌ کاربر عزیز مبلغ $text ترون از  موجودی کیف پول تان کسر گردید.";
     sendmessage($user['Processing_value'], $textkam, null, 'HTML');
     step('home', $from_id);
 }
@@ -3507,7 +3507,7 @@ if ($text == "🛍 مشاهده سفارشات کاربر") {
 👤 نام کاربری اشتراک :  <code>{$OrderUser['username']}</code> 
 📍 لوکیشن سرویس :  {$OrderUser['Service_location']}
 🛍 نام محصول :  {$OrderUser['name_product']}
-💰 قیمت پرداختی سرویس : {$OrderUser['price_product']} تومان
+💰 قیمت پرداختی سرویس : {$OrderUser['price_product']} ترون
 ⚜️ حجم سرویس خریداری شده : {$OrderUser['Volume']}
 ⏳ زمان سرویس خریداری شده : {$OrderUser['Service_time']} روزه
 📆 تاریخ خرید : $datatime
@@ -4320,14 +4320,14 @@ if ($text == "🌟 مبلغ هدیه استارت") {
         $Balance_id_cancel = mysqli_fetch_assoc(mysqli_query($connect, "SELECT * FROM user WHERE id = '{$nameloc['id_user']}' LIMIT 1"));
         $Balance_id_cancel_fee = intval($Balance_id_cancel['Balance']) + intval($text);
         update("user", "Balance", $Balance_id_cancel_fee, "id", $nameloc['id_user']);
-        sendmessage($nameloc['id_user'], "💰کاربر گرامی مبلغ $pricecancel تومان به موجودی شما اضافه گردید.", null, 'HTML');
+        sendmessage($nameloc['id_user'], "💰کاربر گرامی مبلغ $pricecancel ترون به موجودی شما اضافه گردید.", null, 'HTML');
     }
     $text_report = "⭕️ یک ادمین سرویس کاربر که درخواست حذف داشت را تایید کرد
             
             اطلاعات کاربر تایید کننده  : 
             
             🪪 آیدی عددی : <code>$from_id</code>
-            💰 مبلغ بازگشتی : $pricecancel تومان
+            💰 مبلغ بازگشتی : $pricecancel ترون
             👤 نام کاربری : $username
             آیدی عددی درخواست کننده کنسل کردن : {$nameloc['id_user']}";
     if (isset($setting['Channel_Report']) &&strlen($setting['Channel_Report']) > 0) {
